@@ -1,6 +1,6 @@
 {
   "name": "indonesia-qris-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library untuk mengubah QRIS statis menjadi dinamis lengkap dengan UI dan kapabilitas membaca gambar QRIS untuk React",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
