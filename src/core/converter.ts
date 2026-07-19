@@ -32,11 +32,8 @@ export function staticToDynamic(staticQrisString: string, options: ConvertOption
 
   const elements = parseTLV(staticQrisString);
   
-  // Check if it's already dynamic
-  const isDynamic = elements.some((el) => el.tag === '01' && el.value === '12');
-  if (isDynamic) {
-    throw new Error('QRIS payload is already dynamic');
-  }
+  // Some providers like DANA might issue QRIS with '12' (dynamic) even for static standees.
+  // We can just proceed to overwrite the tags safely.
 
   const result: TLV[] = [];
   let amountInserted = false;
